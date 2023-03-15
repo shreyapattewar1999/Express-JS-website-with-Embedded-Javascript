@@ -1,0 +1,24 @@
+<article class="speakerslist jumbotron d-none d-sm-block">
+  <div class="container">
+    <div class="row">
+      <% topSpeakers.forEach(function (currentTopSpeaker){ %>
+      <div class="col-md text-center">
+        <h4 class="speakerslist-title"><%= currentTopSpeaker.title%></h4>
+        <div class="speakerslist-name">
+          with
+          <a href="/speakers/<%=currentTopSpeaker.shortname %>"><%= currentTopSpeaker.name%></a>
+        </div>
+        <div class="speakerslist-info mt-2">
+          <a href="/speakers/<%=currentTopSpeaker.shortname %>">
+            <img
+              class="speakerslist-img rounded-circle"
+              src="/images/speakers/<%=currentTopSpeaker.shortname%>_tn.jpg"
+              alt="Photo of <%= currentTopSpeaker.name%>"
+            />
+          </a>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</article>
