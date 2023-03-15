@@ -19,7 +19,7 @@ module.exports = (params) => {
     try {
       const topSpeakers = await speakersService.getList();
       res.locals.topSpeakers = topSpeakers;
-      console.log(res.locals.topSpeakers);
+      // console.log(res.locals.topSpeakers);
 
       // here pageTitle and template are template variables, which are available only for this request and can be used in home.ejs
       res.render('layout/home.ejs', { pageTitle: 'Welcome', template: 'home.ejs' });
